@@ -4,6 +4,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    outDir: 'dist' // aquí se compilará el resultado de producción
+  },
   server: {
     proxy: {
       '/api': {
